@@ -1,0 +1,10 @@
+{
+	"name": "blob_dev_storage_kv",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://source-blob.vault.azure.net/"
+		}
+	}
+}
