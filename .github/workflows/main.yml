@@ -67,7 +67,7 @@ jobs:
           dataFactoryName: test-data-factory-new
           armTemplateFile: ARMTemplateForFactory.json
           armTemplateParametersFile: ARMTemplateParametersForFactory.json
-          additionalParameters: AzureBlobStorage1_connectionString="@Microsoft.KeyVault(SecretUri=https://source-blob-test.vault.azure.net/secrets/blob-key-vault/)"   blob_dev_storage_kv_properties_typeProperties_baseUrl="https://source-blob-test.vault.azure.net/"
+          additionalParameters: ls_soure_blob_kv_connectionString="@Microsoft.KeyVault(SecretUri=https://source-blob-test.vault.azure.net/secrets/blob-key-vault/)"   blob_dev_storage_kv_properties_typeProperties_baseUrl="https://source-blob-test.vault.azure.net/"
          
           # skipAzModuleInstallation:  # Parameters which skip the Az module installation. Optional, default is false.      
  
