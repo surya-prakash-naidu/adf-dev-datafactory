@@ -2,7 +2,7 @@
 	"name": "sink_blob_ds",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage1",
+			"referenceName": "ls_soure_blob_kv",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
