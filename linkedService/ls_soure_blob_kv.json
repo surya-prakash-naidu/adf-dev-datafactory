@@ -1,5 +1,5 @@
 {
-	"name": "AzureBlobStorage1",
+	"name": "ls_soure_blob_kv",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobStorage",
