@@ -55,7 +55,6 @@ jobs:
       - name: Debug - Check downloaded files
         run: |
           ls -la
-          echo "Current directory: $(pwd)
           
       - name: get the git repo code
         uses: actions/checkout@v3
