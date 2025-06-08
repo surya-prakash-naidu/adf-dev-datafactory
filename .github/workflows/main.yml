@@ -54,9 +54,8 @@ jobs:
           path: .
       - name: Debug - Check downloaded files
         run: |
-          ls -R
-          echo "Current directory: $(pwd)"
-          echo "Workspace: ${{ github.workspace }}
+          ls -la
+          echo "Current directory: $(pwd)
           
       - name: get the git repo code
         uses: actions/checkout@v3
