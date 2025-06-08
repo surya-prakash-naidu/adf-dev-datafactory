@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"factoryName": {
-			"value": "dev-factory-new"
+			"value": "test-data-factory-new"
 		},
 		"ls_soure_blob_kv_properties_typeProperties_serviceEndpoint": {
 			"value": "https://testsourceblob.blob.core.windows.net"
