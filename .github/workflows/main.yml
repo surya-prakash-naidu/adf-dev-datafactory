@@ -51,6 +51,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ExportedArmTemplate # (5) Artifact name
+      - name: get the git repo code
+        uses: actions/checkout@v3
 
 
       - name: Login via Az module
