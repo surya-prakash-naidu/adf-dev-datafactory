@@ -51,7 +51,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ExportedArmTemplate # (5) Artifact name
-          path: ExportedArmTemplate
+          path: .
+      - name: Debug - Check downloaded files
+        run: ls -R
           
       - name: get the git repo code
         uses: actions/checkout@v3
