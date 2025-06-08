@@ -67,8 +67,8 @@ jobs:
           resourceGroupName: test-resource-group
           dataFactoryName: test-data-factory-new
           armTemplateFile: ARMTemplateForFactory.json
-          armTemplateParametersFile: ARMTemplateParametersForFactory.json
-          additionalParameters: ls_soure_blob_kv_properties_typeProperties_serviceEndpoint=https://testsourceblob.blob.core.windows.net
+          armTemplateParametersFile: ${{github.workspace}}/ARMTemplateParametersForFactory_test.json
+          # additionalParameters: ls_soure_blob_kv_properties_typeProperties_serviceEndpoint=https://testsourceblob.blob.core.windows.net
          
           # skipAzModuleInstallation:  # Parameters which skip the Az module installation. Optional, default is false.      
  
