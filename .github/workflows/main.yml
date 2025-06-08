@@ -57,12 +57,8 @@ jobs:
         uses: actions/checkout@v4
       - name: List files to verify parameter file exists
         run: |
-          echo "=== Artifact files ==="
-          ls -la ${{ github.workspace }}/artifacts/
-          echo "=== Repo files ==="
-          ls -la ${{ github.workspace }}/
-          echo "=== Combined workspace ==="
-          ls -la ${{ github.workspace }}/
+          ls -la ${{ github.workspace }}
+        
           
 
       - name: Login via Az module
