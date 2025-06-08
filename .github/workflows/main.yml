@@ -54,7 +54,7 @@ jobs:
           path: ${{ github.workspace }}/artifacts/
           
       - name: get the git repo code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: List files to verify parameter file exists
         run: |
           echo "=== Artifact files ==="
@@ -78,7 +78,7 @@ jobs:
         with:
           resourceGroupName: test-resource-group
           dataFactoryName: test-data-factory-new
-          armTemplateFile: ARMTemplateForFactory.json
+          armTemplateFile: ${{ github.workspace }}/artifacts/ARMTemplateForFactory.json
           armTemplateParametersFile: ARMTemplateParametersForFactory_test.json
           # additionalParameters: ls_soure_blob_kv_properties_typeProperties_serviceEndpoint=https://testsourceblob.blob.core.windows.net
          
