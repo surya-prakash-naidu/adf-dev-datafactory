@@ -73,7 +73,7 @@ jobs:
         with:
           resourceGroupName: test-resource-group
           dataFactoryName: test-data-factory-new
-          armTemplateFile: ExportedArmTemplate/ARMTemplateForFactory.json
+          armTemplateFile: ${{ github.workspace }}/ExportedArmTemplate/ARMTemplateForFactory.json
           armTemplateParametersFile: ${{github.workspace}}/ARMTemplateParametersForFactory_test.json
           # additionalParameters: ls_soure_blob_kv_properties_typeProperties_serviceEndpoint=https://testsourceblob.blob.core.windows.net
          
