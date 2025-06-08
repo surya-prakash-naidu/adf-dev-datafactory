@@ -51,11 +51,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ExportedArmTemplate # (5) Artifact name
-          path: ExportedArmTemplate
+          path: .
       - name: Debug - Check downloaded files
         run: |
-          ls -R ExportedArmTemplate
-          pwd
+          ls -R
+          echo "Current directory: $(pwd)"
+          echo "Workspace: ${{ github.workspace }}
           
       - name: get the git repo code
         uses: actions/checkout@v3
@@ -76,8 +77,8 @@ jobs:
         with:
           resourceGroupName: test-resource-group
           dataFactoryName: test-data-factory-new
-          armTemplateFile: ${{ github.workspace }}/ExportedArmTemplate/ARMTemplateForFactory.json
-          armTemplateParametersFile: ${{github.workspace}}/ARMTemplateParametersForFactory_test.json
+          armTemplateFile: ARMTemplateForFactory.json
+          armTemplateParametersFile: ARMTemplateParametersForFactory_test.json
           # additionalParameters: ls_soure_blob_kv_properties_typeProperties_serviceEndpoint=https://testsourceblob.blob.core.windows.net
          
           # skipAzModuleInstallation:  # Parameters which skip the Az module installation. Optional, default is false.      
