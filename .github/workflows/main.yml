@@ -66,7 +66,7 @@ jobs:
           resourceGroupName: test-resource-group
           dataFactoryName: test-data-factory-new
           armTemplateFile: ARMTemplateForFactory.json
-          armTemplateParametersFile: ARMTemplateParametersForFactory.json
+          armTemplateParametersFile: ${{github.workspace}}/dev-factory-new/ARMTemplateParametersForFactory_ST.json
          
           # skipAzModuleInstallation:  # Parameters which skip the Az module installation. Optional, default is false.      
  
