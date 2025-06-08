@@ -53,14 +53,15 @@ jobs:
           name: ExportedArmTemplate # (5) Artifact name
           path: ExportedArmTemplate
       - name: Debug - Check downloaded files
-        run: ls -R ExportedArmTemplate
+        run: |
+          ls -R ExportedArmTemplate
+          pwd
           
       - name: get the git repo code
         uses: actions/checkout@v3
       - name: List files to verify parameter file exists
-        run: |
-          ls -al ${{ github.workspace }}
-          pwd
+        run: ls -al ${{ github.workspace }}
+          
 
       - name: Login via Az module
         uses: azure/login@v1
