@@ -51,9 +51,9 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ExportedArmTemplate # (5) Artifact name
-          path: .
+          path: ExportedArmTemplate
       - name: Debug - Check downloaded files
-        run: ls -R
+        run: ls -R ExportedArmTemplate
           
       - name: get the git repo code
         uses: actions/checkout@v3
@@ -73,7 +73,7 @@ jobs:
         with:
           resourceGroupName: test-resource-group
           dataFactoryName: test-data-factory-new
-          armTemplateFile: ARMTemplateForFactory.json
+          armTemplateFile: ExportedArmTemplate/ARMTemplateForFactory.json
           armTemplateParametersFile: ${{github.workspace}}/ARMTemplateParametersForFactory_test.json
           # additionalParameters: ls_soure_blob_kv_properties_typeProperties_serviceEndpoint=https://testsourceblob.blob.core.windows.net
          
