@@ -51,12 +51,18 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ExportedArmTemplate # (5) Artifact name
-          path: .
+          path: ${{ github.workspace }}/artifacts/
           
       - name: get the git repo code
         uses: actions/checkout@v3
       - name: List files to verify parameter file exists
-        run: ls -al ${{ github.workspace }}
+        run: |
+          echo "=== Artifact files ==="
+          ls -la ${{ github.workspace }}/artifacts/
+          echo "=== Repo files ==="
+          ls -la ${{ github.workspace }}/
+          echo "=== Combined workspace ==="
+          ls -la ${{ github.workspace }}/
           
 
       - name: Login via Az module
