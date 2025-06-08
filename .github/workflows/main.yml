@@ -53,11 +53,11 @@ jobs:
           name: ExportedArmTemplate # (5) Artifact name
           # path: ${{ github.workspace }}/artifacts/
           
-      - name: get the git repo code
-        uses: actions/checkout@v4
-      - name: List files to verify parameter file exists
-        run: |
-          ls -la ${{ github.workspace }}
+      # - name: get the git repo code
+      #   uses: actions/checkout@v4
+      # - name: List files to verify parameter file exists
+      #   run: |
+      #     ls -la ${{ github.workspace }}
         
           
 
